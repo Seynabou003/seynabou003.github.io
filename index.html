@@ -1,62 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SOC Analyst Portfolio</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 40px;
-      background-color: #0f172a;
-      color: white;
-    }
-    h1 {
-      color: #38bdf8;
-    }
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>SOC Analyst Portfolio</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: white;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #1e293b;
+}
+
+h1 { color: #38bdf8; }
+
+section {
+  padding: 40px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: square;
+}
+</style>
 </head>
 
 <body>
 
-  <h1> SOC Analyst Portfolio</h1>
+<header>
+  <h1>🛡️ SOC Analyst Portfolio</h1>
+  <p>Azure • Microsoft Sentinel • Cybersecurity • Blue Team</p>
+</header>
 
+<!-- ABOUT -->
+<section>
+  <h2>👤 About Me</h2>
   <div class="card">
-    <h2> About Me</h2>
-    <p>Aspiring SOC Analyst specializing in Microsoft Sentinel, Azure security, and Linux log analysis.</p>
-  </div>
-
-  <div class="card">
-    <h2> Project: Azure SOC Lab</h2>
     <p>
-      Built a SIEM environment using Microsoft Sentinel + Ubuntu VM.
-      Configured log ingestion and detection rules for SSH brute force attacks.
+      Aspiring SOC Analyst with hands-on experience in Microsoft Sentinel,
+      Azure cloud security, and Linux log analysis. Passionate about threat detection
+      and incident response.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>🧠 Skills</h2>
+  <div class="card">
+    <ul>
+      <li>Microsoft Sentinel (SIEM)</li>
+      <li>Azure Cloud Security</li>
+      <li>KQL (Kusto Query Language)</li>
+      <li>Linux System Administration</li>
+      <li>Log Analysis (Syslog)</li>
+      <li>Incident Detection & Response</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>📂 Projects</h2>
+
+  <div class="card">
+    <h3>🛡️ Azure SOC Lab (Sentinel + Ubuntu VM)</h3>
+    <p>
+      Built a full SIEM environment using Microsoft Sentinel.
+      Configured Ubuntu VM to send Syslog data via Azure Monitor Agent.
+      Created brute force SSH detection rules.
+    </p>
+    <p>
+      🔗 GitHub: <a href="https://github.com/ton-username/azure-soc-lab">View Project</a>
     </p>
   </div>
 
   <div class="card">
-    <h2> Skills</h2>
-    <ul>
-      <li>Microsoft Sentinel (SIEM)</li>
-      <li>Azure Cloud Security</li>
-      <li>KQL Queries</li>
-      <li>Linux Log Analysis</li>
-    </ul>
+    <h3>📊 Log Analysis Project</h3>
+    <p>
+      Performed Linux log analysis using Syslog to detect failed login attempts
+      and suspicious system activity.
+    </p>
+    <p>
+      🔗 GitHub: <a href="#">Coming Soon</a>
+    </p>
   </div>
 
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>💼 Experience</h2>
+
   <div class="card">
-    <h2> Example KQL Query</h2>
-    <pre>
-Syslog
-| where SyslogMessage has "Failed password"
-| summarize Attempts = count() by HostName
-    </pre>
+    <p>
+      IT Support / Cybersecurity Training (Self-Learning Labs)<br>
+      - Azure VM deployment<br>
+      - SIEM configuration (Sentinel)<br>
+      - Security log analysis
+    </p>
   </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+  <h2>📜 Certifications & Tools</h2>
+
+  <div class="card">
+    <ul>
+      <li>Microsoft Azure Fundamentals (in progress)</li>
+      <li>Microsoft Sentinel Hands-on Lab</li>
+      <li>Linux Basics for Cybersecurity</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+  <h2>📞 Contact</h2>
+
+  <div class="card">
+    <p>Email: your.email@example.com</p>
+    <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+    <p>GitHub: <a href="https://github.com/ton-username">GitHub Profile</a></p>
+  </div>
+</section>
 
 </body>
 </html>

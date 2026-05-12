@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SOC Analyst Portfolio</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 40px;
+      background-color: #0f172a;
+      color: white;
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1> SOC Analyst Portfolio</h1>
+
+  <div class="card">
+    <h2> About Me</h2>
+    <p>Aspiring SOC Analyst specializing in Microsoft Sentinel, Azure security, and Linux log analysis.</p>
+  </div>
+
+  <div class="card">
+    <h2> Project: Azure SOC Lab</h2>
+    <p>
+      Built a SIEM environment using Microsoft Sentinel + Ubuntu VM.
+      Configured log ingestion and detection rules for SSH brute force attacks.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2> Skills</h2>
+    <ul>
+      <li>Microsoft Sentinel (SIEM)</li>
+      <li>Azure Cloud Security</li>
+      <li>KQL Queries</li>
+      <li>Linux Log Analysis</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2> Example KQL Query</h2>
+    <pre>
+Syslog
+| where SyslogMessage has "Failed password"
+| summarize Attempts = count() by HostName
+    </pre>
+  </div>
+
+</body>
+</html>

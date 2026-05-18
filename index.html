@@ -180,25 +180,32 @@
   </div>
 
   <div class="card case">
-    <h3>[CASE-002] SSH Brute Force Detection</h3>
-    <p><strong>Status:</strong> In Progress</p>
-    <p>
-      Created a Sentinel analytics rule to detect multiple failed SSH login attempts
-      from Linux Syslog events.
-    </p>
+  <h3>[CASE-002] SOC Monitoring Dashboard — Microsoft Sentinel Workbook</h3>
+  <p><strong>Status:</strong> <span class="status">Completed</span></p>
+  <p><strong>Category:</strong> SIEM Dashboard / Threat Monitoring / Blue Team</p>
 
-    <pre>
+  <p>
+    Designed and built a SOC monitoring dashboard in Microsoft Sentinel using Workbooks.
+    The dashboard visualizes Linux authentication activity, failed SSH attempts,
+    monitored hosts, recent security logs, and incidents by severity.
+  </p>
+
+  <p><strong>Tools:</strong> Microsoft Sentinel, Workbooks, KQL, Syslog, Azure Monitor</p>
+
+  <pre>
 Syslog
 | where SyslogMessage has "Failed password"
-| summarize Attempts = count() by HostName, bin(TimeGenerated, 5m)
-| where Attempts > 5
-    </pre>
+| summarize FailedAttempts = count() by bin(TimeGenerated, 1h)
+| render timechart
+  </pre>
 
-    <p>
-      <strong>GitHub:</strong>
-      <a href="#" target="_blank">Coming Soon</a>
-    </p>
-  </div>
+  <p>
+    <strong>GitHub:</strong>
+    <a href="https://github.com/Seynabou003/azure-soc-lab" target="_blank">
+      View Dashboard Project
+    </a>
+  </p>
+</div>
 </section>
 
 <section>

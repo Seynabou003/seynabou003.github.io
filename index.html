@@ -192,12 +192,6 @@
 
   <p><strong>Tools:</strong> Microsoft Sentinel, Workbooks, KQL, Syslog, Azure Monitor</p>
 
-  <pre>
-Syslog
-| where SyslogMessage has "Failed password"
-| summarize FailedAttempts = count() by bin(TimeGenerated, 1h)
-| render timechart
-  </pre>
 
   <p>
     <strong>GitHub:</strong>
